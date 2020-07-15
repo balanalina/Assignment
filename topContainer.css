@@ -1,0 +1,38 @@
+.topContainer {
+  background: url(caffee2.jpg) no-repeat center fixed;
+  height: 500px;
+  background-size: cover;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+}
+.topContainer .caffeeLogo {
+  display: inline-block;
+  vertical-aling: middle;
+  padding-top: 2.7%;
+}
+.topContainer nav {
+  width: 100%;
+  z-index: 4;
+  height: 110px;
+  padding-bottom: 10px;
+  display: inherit;
+}
+.topContainer nav p {
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+  z-index: 5;
+  color: white;
+  padding-left: 10px;
+  margin: 0;
+}
+.topContainer nav img {
+  border-radius: 50%;
+  z-index: 5;
+  height: 50px;
+  width: auto;
+  margin-left: 12%;
+  margin-top: 2%;
+}
+
+/*# sourceMappingURL=topContainer.css.map */

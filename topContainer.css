@@ -1,38 +1,75 @@
 .topContainer {
   background: url(caffee2.jpg) no-repeat center fixed;
-  height: 500px;
+  height: 600px;
   background-size: cover;
   width: 100%;
   z-index: 1;
-  display: flex;
+  text-align: center;
 }
 .topContainer .caffeeLogo {
   display: inline-block;
-  vertical-aling: middle;
   padding-top: 2.7%;
 }
 .topContainer nav {
   width: 100%;
-  z-index: 4;
   height: 110px;
   padding-bottom: 10px;
-  display: inherit;
+  display: flex;
 }
 .topContainer nav p {
   font-family: "Averia Serif Libre";
   font-size: 15px;
-  z-index: 5;
+  color: white;
+}
+.topContainer nav .logoText {
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
   color: white;
   padding-left: 10px;
   margin: 0;
 }
 .topContainer nav img {
   border-radius: 50%;
-  z-index: 5;
   height: 50px;
   width: auto;
   margin-left: 12%;
   margin-top: 2%;
+}
+.topContainer img {
+  margin-top: 0;
+}
+
+.rightSideInfo {
+  margin-left: 30%;
+  justify-content: space-between;
+  padding-top: 2.7%;
+  margin-right: 0;
+  width: 100%;
+}
+.rightSideInfo p {
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.rightSideInfo p:hover {
+  color: orange;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: orange;
+  display: inline-block;
+}
+
+h1 {
+  font-family: "Averia Serif Libre";
+  font-size: 80px;
+  color: orange;
+  vertical-align: middle;
+  margin-bottom: 1px;
 }
 
 /*# sourceMappingURL=topContainer.css.map */

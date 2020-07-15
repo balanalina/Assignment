@@ -1,9 +1,10 @@
 .topContainer {
   background: url(caffee2.jpg) no-repeat center fixed;
-  height: 600px;
+  height: 550px;
   background-size: cover;
   width: 100%;
   z-index: 1;
+  position: relative;
   text-align: center;
 }
 .topContainer .caffeeLogo {
@@ -34,9 +35,6 @@
   width: auto;
   margin-left: 12%;
   margin-top: 2%;
-}
-.topContainer img {
-  margin-top: 0;
 }
 
 .rightSideInfo {
@@ -70,6 +68,89 @@ h1 {
   color: orange;
   vertical-align: middle;
   margin-bottom: 1px;
+}
+
+.forkKnife {
+  vertical-align: middle;
+  width: 100%;
+}
+.forkKnife p {
+  width: 100px;
+  color: transparent;
+  display: inline-block;
+  text-decoration-line: overline;
+  text-decoration-style: wavy;
+  text-decoration-color: orange;
+  padding-right: 200px;
+  padding-left: 10px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.forkKnife img {
+  display: inline-block;
+  margin-top: 6px;
+  height: 25px;
+}
+
+.randomText {
+  font-family: "Averia Serif Libre";
+  font-size: 20px;
+  color: orange;
+  margin-top: 0;
+}
+.randomText:hover {
+  font-size: 35px;
+}
+
+.dropDownMenu {
+  width: 100%;
+  background-color: #e6e6e6;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  height: 50px !important;
+}
+.dropDownMenu ul {
+  justify-content: space-between;
+  width: 50%;
+  align-items: flex-start;
+}
+.dropDownMenu li {
+  width: 20%;
+  display: inline-block;
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+}
+.dropDownMenu .slider {
+  width: 50%;
+  justify-content: center;
+}
+.dropDownMenu .slider p {
+  display: inline-block;
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+  color: black;
+}
+.dropDownMenu .slider input {
+  display: inline-block;
+  max: 500;
+  min: 15;
+}
+.dropDownMenu .slider .price {
+  color: grey;
+}
+
+.arrow {
+  border: solid orange;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=topContainer.css.map */

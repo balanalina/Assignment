@@ -153,4 +153,62 @@ h1 {
   -webkit-transform: rotate(45deg);
 }
 
+.child {
+  display: none;
+}
+
+.parent > li {
+  display: inline-block;
+  text-align: center;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.menu {
+  margin-top: 50px;
+}
+
+.items {
+  display: flex;
+  margin-left: 110px;
+  margin-right: 50px;
+}
+.items .item {
+  outline-color: #e6e6e6;
+  outline-style: solid;
+  outline-width: 0.5px;
+  align-items: flex-start;
+}
+.items .item .picture {
+  height: 250px;
+  display: flex;
+}
+.items .item img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  padding-right: 50px;
+  padding-left: 20px;
+  padding-top: 3px;
+  justify-content: space-evenly;
+}
+.items .item p {
+  font-family: "Averia Serif Libre";
+  justify-content: center;
+  text-align: center;
+  margin: 1;
+}
+.items .item .price {
+  color: orange;
+  font-size: 15px;
+}
+.items .item .category {
+  color: grey;
+  font-size: 15px;
+}
+
+.title {
+  font-size: 80px;
+}
+
 /*# sourceMappingURL=topContainer.css.map */

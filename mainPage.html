@@ -3,13 +3,17 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Averia Serif Libre' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="topContainer.css">
+	<link href="nouislider.css" rel="stylesheet">
+	<script src="nouislider.js"></script>
+	<script type="text/javascript" src="jquery-3.5.0.min.js"></script>
 	<script type="text/javascript" src="mainPage.js"></script>
 	<title></title>
 </head>
-<body onload="ok()">
+<body onload="loadSlider()">
 	<div class="topContainer">
 		<nav>
-			<img src="caffeeLogo.jpeg">
+			<img src="img/
+			caffeeLogo.jpeg">
 			<div class="caffeeLogo">
 				<p class="logoText">EUREKA</p>
 				<p class="logoText">CAFFEE</p>
@@ -29,44 +33,45 @@
 		<h1>Ordering food</h1>
 		<div class="forkKnife">
 			<p id="wavyLine1">kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
-			<img src="forkIcon.png">
+			<img src="img/forkIcon.png">
 			<p id="wavyLine2">kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
 		</div>
 		<p class="randomText">Maecenas vells at magna sagittis venenatis. Integer pretium auctor <br> magna, egestas justo gravida vitae. In lacinia auctor auctor.</p>
-		<nav class="dropDownMenu">
+		<nav class="dropDownMenu" id="dropDownMenu">
 			<ul class="parent">
-				<li>CATEGORY<i class="arrow down"></i>
+				<li onclick="dropDown(this)" >CATEGORY<i class="arrow down"></i>
 					<ul class = "child">
-						<li>Item1</li>
-						<li>Item2</li>
-						<li>Item3</li>
-						<li>Item4</li>
-						<li>Item5</li>
+						<li>Item1</li><br>
+						<li>Item2</li><br>
+						<li>Item3</li><br>
+						<li>Item4</li><br>
+						<li>Item5</li><br>
 					</ul>
 				</li>
-				<li>SORTING<i class="arrow down"></i>
+				<li onclick="dropDown(this)">SORTING<i class="arrow down"></i>
 					<ul class = "child">
-						<li>Item1</li>
-						<li>Item2</li>
-						<li>Item3</li>
-						<li>Item4</li>
-						<li>Item5</li>
+						<li>Item1</li><br>
+						<li>Item2</li><br>
+						<li>Item3</li><br>
+						<li>Item4</li><br>
+						<li>Item5</li><br>
 					</ul>
 				</li>
-				<li>VEGETARIAN<i class="arrow down"></i>
+				<li onclick="dropDown(this)">VEGETARIAN<i class="arrow down"></i>
 					<ul class = "child">
-						<li>Item1</li>
-						<li>Item2</li>
-						<li>Item3</li>
-						<li>Item4</li>
-						<li>Item5</li>
+						<li>Item1</li><br>
+						<li>Item2</li><br>
+						<li>Item3</li><br>
+						<li>Item4</li><br>
+						<li>Item5</li><br>
 					</ul>
 				</li>
 			</ul>
 			<div class="slider" >
 				<p>PRICE</p>
 				<p class="price">$15</p>
-				<input type="range" name="">
+				<div id="mySlider"></div>
+				<!--<input type="range" name="">-->
 				<p class="price">$100</p>
 			</div>
 		</nav>
@@ -74,25 +79,25 @@
 	<div class="menu">
 		<div class="items" style="background: white">
 			<div class="item" id="lefttop">
-				<div class="picture"><img src="f1.jpg"></div>
+				<div class="picture"><img src="img/f1.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Eggs</p></b>
 				<p class="category">Breakfasts</p>
 				<p class="price">$12</p>
 			</div>
 			<div class="item" id="top">
-				<div class="picture"><img src="f2.jpg"></div>
+				<div class="picture"><img src="img/f2.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Sweets</p></b>
 				<p class="category">Breakfasts</p>
 				<p class="price">$17</p>
 			</div>
 			<div class="item" id="top">
-				<div class="picture"><img src="f3.jpg"></div>
+				<div class="picture"><img src="img/f3.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Gourmet Breakfast</p></b>
 				<p class="category">Breakfasts</p>
 				<p class="price">$20</p>
 			</div>
 			<div class="item" id="topright">
-				<div class="picture"><img src="f4.jpg"></div>
+				<div class="picture"><img src="img/f4.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Risotto</p></b>
 				<p class="category">Second Courses</p>
 				<p class="price">$45</p>
@@ -100,25 +105,25 @@
 		</div>
 		<div class="items" style="background: white">
 			<div class="item" id="left">
-				<div class="picture"><img src="f5.jpg"></div>
+				<div class="picture"><img src="img/f5.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Fancy Meat</p></b>
 				<p class="category">Second Courses</p>
 				<p class="price">$70</p>
 			</div>
 			<div class="item all">
-				<div class="picture"><img src="f6.jpg"></div>
+				<div class="picture"><img src="img/f6.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Sea Weed Rice</p></b>
 				<p class="category">Entrees</p>
 				<p class="price">$37</p>
 			</div>
 			<div class="item all">
-				<div class="picture"><img src="f7.jpg"></div>
+				<div class="picture"><img src="img/f7.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Spaghetti</p></b>
 				<p class="category">Second Courses</p>
 				<p class="price">$40</p>
 			</div>
 			<div class="item" id="right">
-				<div class="picture"><img src="f8.jpg"></div>
+				<div class="picture"><img src="img/f8.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Spotted Burger</p></b>
 				<p class="category">Burgers</p>
 				<p class="price">$70</p>
@@ -126,25 +131,25 @@
 		</div>
 				<div class="items" style="background: white">
 			<div class="item" id="left">
-				<div class="picture"><img src="f1.jpg"></div>
+				<div class="picture"><img src="img/f1.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Eggs</p></b>
 				<p class="category">Breakfasts</p>
 				<p class="price">$12</p>
 			</div>
 			<div class="item all">
-				<div class="picture"><img src="f2.jpg"></div>
+				<div class="picture"><img src="img/f2.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Sweets</p></b>
 				<p class="category">Breakfasts</p>
 				<p class="price">$17</p>
 			</div>
 			<div class="item all">
-				<div class="picture"><img src="f3.jpg"></div>
+				<div class="picture"><img src="img/f3.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Gourmet Breakfast</p></b>
 				<p class="category">Breakfasts</p>
 				<p class="price">$20</p>
 			</div>
 			<div class="item" id="right">
-				<div class="picture"><img src="f4.jpg"></div>
+				<div class="picture"><img src="img/f4.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Risotto</p></b>
 				<p class="category">Second Courses</p>
 				<p class="price">$45</p>
@@ -152,25 +157,25 @@
 		</div>
 		<div class="items" style="background: white">
 			<div class="item" id="leftbottom">
-				<div class="picture"><img src="f5.jpg"></div>
+				<div class="picture"><img src="img/f5.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Fancy Meat</p></b>
 				<p class="category">Second Courses</p>
 				<p class="price">$70</p>
 			</div>
 			<div class="item" id="bottom">
-				<div class="picture"><img src="f6.jpg"></div>
+				<div class="picture"><img src="img/f6.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Sea Weed Rice</p></b>
 				<p class="category">Entrees</p>
 				<p class="price">$37</p>
 			</div>
 			<div class="item" id="bottom">
-				<div class="picture"><img src="f7.jpg"></div>
+				<div class="picture"><img src="img/f7.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Spaghetti</p></b>
 				<p class="category">Second Courses</p>
 				<p class="price">$40</p>
 			</div>
 			<div class="item" id="bottomright">
-				<div class="picture"><img src="f8.jpg"></div>
+				<div class="picture"><img src="img/f8.jpg"></div>
 				<b><p clas="title" style="font-size: 30px;">Spotted Burger</p></b>
 				<p class="category">Burgers</p>
 				<p class="price">$70</p>

@@ -1,5 +1,5 @@
 .topContainer {
-  background: url(caffee2.jpg) no-repeat center fixed;
+  background: url(img/caffee2.jpg) no-repeat center fixed;
   height: 550px;
   background-size: cover;
   width: 100%;
@@ -125,6 +125,7 @@ h1 {
 .dropDownMenu .slider {
   width: 50%;
   justify-content: center;
+  margin-top: 10px;
 }
 .dropDownMenu .slider p {
   display: inline-block;
@@ -132,10 +133,13 @@ h1 {
   font-size: 15px;
   color: black;
 }
-.dropDownMenu .slider input {
+.dropDownMenu .slider #mySlider {
   display: inline-block;
-  max: 500;
-  min: 15;
+  width: 300px;
+  margin: 2px;
+  color: orange;
+  height: 10px;
+  margin-top: 8px;
 }
 .dropDownMenu .slider .price {
   color: grey;
@@ -155,13 +159,26 @@ h1 {
 
 .child {
   display: none;
+  font-size: 15px;
+  font-family: "Averia Serif Libre";
+}
+.child li {
+  margin: 2px;
+  color: black;
 }
 
 .parent > li {
   display: inline-block;
+  width: 20%;
   text-align: center;
   padding-top: 8px;
   cursor: pointer;
+  float: left;
+  margin-left: 80px;
+  list-style: none;
+  padding-top: 7px;
+  color: black;
+  text-align: center;
 }
 
 .menu {

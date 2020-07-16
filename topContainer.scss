@@ -9,8 +9,8 @@ $fontSize: 15px;
 	width: 100%;
 	z-index: 1;
 	position: relative;
-	
 	text-align: center;
+	
 	.caffeeLogo{
 		display: inline-block;
 		padding-top: 2.7%;
@@ -204,23 +204,38 @@ $fontSize: 15px;
 
 .menu{
 	margin-top: 50px;
+	outline-color: none;
+	//background: black;
 }
 
 .items{
 	display: flex;
-	margin-left: 110px;
+	margin-left: 150px;
 	margin-right: 50px;
+
+	
+
 
 
 	.item{
-		outline-color: #e6e6e6;
-		outline-style: solid;
-		outline-width: 0.5px;
+		border-color: #e6e6e6;
+		border-style: solid;
+		border-width: 0.5px;
 		align-items: flex-start;
+		//margin: 1px;
+		background-color: white;
+		transition: all .2s ease-in-out;
+
+		&:hover {
+          transform: scale(1.08);
+          z-index: 10; 
+        }
 
 		.picture{
 			height: 250px;
 			display: flex;
+
+			padding-top: 7px;
 		}
 
 		img{
@@ -248,7 +263,6 @@ $fontSize: 15px;
  		.category{
  			color: grey;
  			font-size: $fontSize;
-
  		}
 
 	}
@@ -257,3 +271,39 @@ $fontSize: 15px;
 .title{
  	font-size: 80px;
  }
+
+#lefttop{
+	border-left-color: white;
+	border-top-color: white;
+}
+
+#topright{
+	border-right-color: white;
+	border-top-color: white;
+}
+
+#leftbottom{
+	border-left-color: white;
+	border-bottom-color: white;
+}
+
+#bottomright{
+	border-right-color: white;
+	border-bottom-color: white;
+}
+
+#top{
+	border-top-color: white;
+}
+
+#bottom{
+	border-bottom-color: white;
+}
+
+#right{
+	border-right-color: white;
+}
+
+#left{
+	border-left-color: white;
+}

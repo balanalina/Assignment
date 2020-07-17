@@ -3,18 +3,20 @@ function loadSlider(){
 	var slider = document.getElementById('mySlider');
 	console.log(slider);
 	noUiSlider.create(slider, {
-    	start: [40, 80],
+    	start: [0, 100],
     	connect: true,
     	range: {
-        	'min': 15,
+        	'min': 0,
         	'max': 100
 	    }
 	});
 	slider.noUiSlider.on('update',function(values,handler){
 	document.getElementById("first").innerHTML="$"+values[0];
 	document.getElementById("second").innerHTML="$"+values[1];
+	$('.menu').innerHTML = "";	
+	loadElements(parseInt(values[0]),parseInt(values[1]));
 });
-	loadElements();
+	loadElements(0,100);
 }
 
 // $("#mySlider")[0].on('update',function(){
@@ -24,10 +26,15 @@ function loadSlider(){
 // 	document.getElementById("second").innerHTML="$"+values[1];
 // });
 
+function setSlider(){
+	var slider = document.getElementById('mySlider');
+	slider.noUiSlider.set([0, 100]);
+}
+
 $(document).on('click','.item',function(){
 		$(".delAdd").fadeIn().delay(7000).fadeOut();
 		var clas = $(this).attr('class');
-		var nr = clas.charAt(clas.length-1);
+		nr = clas.slice(5);
 		$(".del").click(function(){ deleteEl(nr); });
 	});
 
@@ -36,6 +43,11 @@ function addEl(){
 	var category = prompt("Enter the cateogory of the dish: ","Breakfast");
 	var price = prompt("Enter the price of teh dish: ","$12");
 	var src = prompt("Enter the dish picture source: ","");
+	console.log(title);
+	if(title == null || category == null || price == null || src == null)
+		return;
+	if(title.length == 0 || category.length == 0 || price.length == 0 || src.length == 0)
+		return;
 	var length = parseInt(localStorage.getItem("itemsLength"));
 	length+=1;
 	localStorage.setItem('itemsLength',length);
@@ -43,7 +55,8 @@ function addEl(){
 	localStorage.setItem('title'+length,title);
 	localStorage.setItem('price'+length,price);
 	localStorage.setItem('src'+length,src);
-	loadElements();
+	setSlider();
+	loadElements(0,100);
 }
 
 function deleteEl(el){
@@ -52,7 +65,8 @@ function deleteEl(el){
 	localStorage.removeItem('category'+el);
 	localStorage.removeItem('price'+el);
 	$('.menu').innerHTML = "";	
-	loadElements();
+	setSlider();
+	loadElements(0,100);
 }
 
 function writeElements(){
@@ -92,8 +106,8 @@ function writeElements(){
 	localStorage.setItem('itemsLength',8);
 }
 
-function loadElements(){
-	
+function loadElements(lowerBound,upperBound){
+	console.log(lowerBound+"\n"+upperBound);
 	var length = localStorage.getItem('itemsLength');
 	//var nrOfRowDivs = Math.ceil(length/4);
 
@@ -102,6 +116,10 @@ function loadElements(){
 			var count =0;
 	for(var i=1;i<=length;i++){
 		if(localStorage.getItem('src'+i) == null)
+			continue;
+		var price=localStorage.getItem('price'+i);
+		price=price.slice(1);
+		if(price < lowerBound || price > upperBound)
 			continue;
 		count+=1;
 		if(count%4==1)

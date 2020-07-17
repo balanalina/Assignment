@@ -1,5 +1,5 @@
 .topContainer {
-  background: url(img/caffee2.jpg) no-repeat center fixed;
+  background: url(caffee2.jpg) no-repeat center fixed;
   height: 550px;
   background-size: cover;
   width: 100%;
@@ -188,8 +188,8 @@ h1 {
 
 .items {
   display: flex;
-  margin-left: 150px;
-  margin-right: 50px;
+  margin-left: 12%;
+  margin-right: 15%;
 }
 .items .item {
   border-color: #e6e6e6;
@@ -272,4 +272,20 @@ h1 {
   border-left-color: white;
 }
 
-/*# sourceMappingURL=topContainer.css.map */
+.delAdd {
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+  background-color: #e6e6e6;
+  z-index: 15;
+  float: left;
+  display: none;
+}
+.delAdd p {
+  padding: 20px;
+  color: black;
+}
+.delAdd p:hover {
+  color: orange;
+}
+
+/*# sourceMappingURL=mainPage.css.map */

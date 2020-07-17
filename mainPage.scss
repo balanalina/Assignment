@@ -1,0 +1,338 @@
+$font: 'Averia Serif Libre';
+$fontSize: 15px;
+
+.topContainer{
+
+	background: url(img/caffee2.jpg) no-repeat center fixed;
+	height: 550px;
+	background-size: cover;
+	width: 100%;
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	
+	.caffeeLogo{
+		display: inline-block;
+		padding-top: 2.7%;
+	}
+
+	nav{
+		width: 100%;
+		//background-color: green;
+		height: 110px;
+		padding-bottom: 10px;
+		display: flex;
+
+		p{
+			font-family: $font;
+			font-size: $fontSize;
+			color: white;
+		}
+
+		.logoText{
+			font-family: $font;
+			font-size: $fontSize;
+			color: white;
+			padding-left: 10px;
+			margin: 0;
+		}
+
+		img{
+			border-radius: 50%;
+			height: 50px;
+			width: auto;
+			margin-left: 12%;
+			margin-top: 2%;
+		}
+	}
+
+}
+
+.rightSideInfo{
+	//display: inherit;
+	//margin: 0;
+	//background-color: purple;
+	margin-left: 30%;
+	justify-content: space-between;
+	padding-top: 2.7%;
+	margin-right: 0;
+	width: 100%;
+
+	p{
+		display:inline-block;
+		padding-right: 20px;
+		padding-left: 20px;
+		&:hover{
+			color: orange;
+		}
+	}
+}
+
+.dot{
+	height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: orange;
+    display: inline-block;
+ }
+
+ h1{
+ 	font-family: $font;
+ 	font-size: 80px;
+ 	color: orange;
+ 	vertical-align: middle;
+ 	margin-bottom: 1px;
+ 	//-webkit-text-stroke: 0.3px black;
+ }
+
+ .forkKnife{
+ 	vertical-align: middle;
+ 	width: 100%;
+ 	//background-color: blue;
+
+ 	p{
+ 		width: 100px;
+ 		color: transparent;
+ 		display: inline-block;
+ 		text-decoration-line: overline;
+ 		text-decoration-style: wavy;
+ 		text-decoration-color: orange;
+ 		padding-right: 200px;
+ 		padding-left: 10px;
+ 		padding-top: 0px;
+ 		margin-top: 0px;
+ 	}
+
+ 	img{
+ 		//padding: 10px;
+ 		display: inline-block;
+ 		margin-top: 6px;
+ 		height: 25px;
+ 	}
+
+ }
+
+ .randomText{
+ 	//margin-left: 80px;
+ 	font-family: $font;
+ 	font-size: $fontSize +5;
+ 	color: orange;
+ 	margin-top: 0;
+
+ 	&:hover{
+ 		font-size: $fontSize + 20;
+ 	}
+ }
+
+ .dropDownMenu{
+ 	width: 100%;
+ 	background-color: #e6e6e6;
+ 	bottom: 0;
+ 	left: 0;
+ 	position: absolute;
+ 	display: flex;
+ 	//top:500px;
+ 	height: 50px !important;
+
+ 	ul{
+ 		justify-content: space-between;
+ 		width: 50%;
+ 		align-items: flex-start;
+ 		//background-color: pink;
+ 	}
+
+ 	li{
+ 		width: 20%;
+ 		display: inline-block;
+ 		font-family: $font;
+ 		font-size: $fontSize;
+
+ 	}
+
+ 	.slider{
+
+ 		width: 50%;
+ 		justify-content: center;
+ 		margin-top: 10px;
+
+ 		p{
+ 			display: inline-block;
+ 			font-family: $font;
+ 			font-size: $fontSize;
+ 			color: black;
+
+ 		}
+
+ 		#mySlider{
+ 			display: inline-block;
+ 			width: 300px;
+ 			margin: 2px;
+ 			color: orange;
+ 			height: 10px;
+ 			margin-top: 8px;
+ 		}
+
+ 		.price{
+ 			color: grey;
+ 		}
+ 	}
+ }
+
+.arrow {
+  border: solid orange;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+}
+
+ .down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.child{
+		display: none;		
+		font-size: $fontSize;
+		font-family: $font;
+		li{
+			margin: 2px;
+			color: black;
+		}
+	}
+
+.parent > li{
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+			//font-size: 30px;
+	padding-top: 8px;
+	cursor: pointer;
+	float: left;
+	margin-left: 80px;
+	list-style: none;
+	padding-top: 7px;
+	color: black;
+	text-align: center;
+}
+
+
+.menu{
+	margin-top: 50px;
+	outline-color: none;
+	//background: black;
+}
+
+.items{
+	display: flex;
+	margin-left: 12%;
+	margin-right: 15%;
+
+	.item{
+		border-color: #e6e6e6;
+		border-style: solid;
+		border-width: 0.5px;
+		align-items: flex-start;
+		//margin: 1px;
+		background-color: white;
+		transition: all .2s ease-in-out;
+
+		&:hover {
+          transform: scale(1.08);
+          z-index: 10; 
+        }
+
+		.picture{
+			height: 250px;
+			display: flex;
+
+			padding-top: 7px;
+		}
+
+		img{
+			width: 250px;
+			height: auto;
+			border-radius: 50%;
+			padding-right: 50px;
+			padding-left: 20px;
+			padding-top: 3px;
+			justify-content: space-evenly;
+		}
+
+		p{
+			font-family: $font;
+			justify-content: center;
+			text-align: center;
+			margin: 1;
+		}
+
+		.price{
+ 			color: orange;
+ 			font-size: $fontSize;
+ 		}
+
+ 		.category{
+ 			color: grey;
+ 			font-size: $fontSize;
+ 		}
+
+	}
+}
+
+.title{
+ 	font-size: 80px;
+ }
+
+#lefttop{
+	border-left-color: white;
+	border-top-color: white;
+}
+
+#topright{
+	border-right-color: white;
+	border-top-color: white;
+}
+
+#leftbottom{
+	border-left-color: white;
+	border-bottom-color: white;
+}
+
+#bottomright{
+	border-right-color: white;
+	border-bottom-color: white;
+}
+
+#top{
+	border-top-color: white;
+}
+
+#bottom{
+	border-bottom-color: white;
+}
+
+#right{
+	border-right-color: white;
+}
+
+#left{
+	border-left-color: white;
+}
+
+.delAdd{
+	font-family: $font;
+	font-size: $fontSize;
+	background-color: #e6e6e6;
+	z-index: 15;
+	float: left;
+	display: none;
+	p{
+		padding: 20px;
+		color: black;
+		&:hover{
+			color: orange;
+		}
+	}
+	
+}

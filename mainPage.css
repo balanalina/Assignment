@@ -1,0 +1,291 @@
+.topContainer {
+  background: url(img/caffee2.jpg) no-repeat center fixed;
+  height: 550px;
+  background-size: cover;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+.topContainer .caffeeLogo {
+  display: inline-block;
+  padding-top: 2.7%;
+}
+.topContainer nav {
+  width: 100%;
+  height: 110px;
+  padding-bottom: 10px;
+  display: flex;
+}
+.topContainer nav p {
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+  color: white;
+}
+.topContainer nav .logoText {
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+  color: white;
+  padding-left: 10px;
+  margin: 0;
+}
+.topContainer nav img {
+  border-radius: 50%;
+  height: 50px;
+  width: auto;
+  margin-left: 12%;
+  margin-top: 2%;
+}
+
+.rightSideInfo {
+  margin-left: 30%;
+  justify-content: space-between;
+  padding-top: 2.7%;
+  margin-right: 0;
+  width: 100%;
+}
+.rightSideInfo p {
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.rightSideInfo p:hover {
+  color: orange;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: orange;
+  display: inline-block;
+}
+
+h1 {
+  font-family: "Averia Serif Libre";
+  font-size: 80px;
+  color: orange;
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+
+.forkKnife {
+  vertical-align: middle;
+  width: 100%;
+}
+.forkKnife p {
+  width: 100px;
+  color: transparent;
+  display: inline-block;
+  text-decoration-line: overline;
+  text-decoration-style: wavy;
+  text-decoration-color: orange;
+  padding-right: 200px;
+  padding-left: 10px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.forkKnife img {
+  display: inline-block;
+  margin-top: 6px;
+  height: 25px;
+}
+
+.randomText {
+  font-family: "Averia Serif Libre";
+  font-size: 20px;
+  color: orange;
+  margin-top: 0;
+}
+.randomText:hover {
+  font-size: 35px;
+}
+
+.dropDownMenu {
+  width: 100%;
+  background-color: #e6e6e6;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  height: 50px !important;
+}
+.dropDownMenu ul {
+  justify-content: space-between;
+  width: 50%;
+  align-items: flex-start;
+}
+.dropDownMenu li {
+  width: 20%;
+  display: inline-block;
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+}
+.dropDownMenu .slider {
+  width: 50%;
+  justify-content: center;
+  margin-top: 10px;
+}
+.dropDownMenu .slider p {
+  display: inline-block;
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+  color: black;
+}
+.dropDownMenu .slider #mySlider {
+  display: inline-block;
+  width: 300px;
+  margin: 2px;
+  color: orange;
+  height: 10px;
+  margin-top: 8px;
+}
+.dropDownMenu .slider .price {
+  color: grey;
+}
+
+.arrow {
+  border: solid orange;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.child {
+  display: none;
+  font-size: 15px;
+  font-family: "Averia Serif Libre";
+}
+.child li {
+  margin: 2px;
+  color: black;
+}
+
+.parent > li {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  padding-top: 8px;
+  cursor: pointer;
+  float: left;
+  margin-left: 80px;
+  list-style: none;
+  padding-top: 7px;
+  color: black;
+  text-align: center;
+}
+
+.menu {
+  margin-top: 50px;
+  outline-color: none;
+}
+
+.items {
+  display: flex;
+  margin-left: 12%;
+  margin-right: 15%;
+}
+.items .item {
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-width: 0.5px;
+  align-items: flex-start;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.items .item:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+.items .item .picture {
+  height: 250px;
+  display: flex;
+  padding-top: 7px;
+}
+.items .item img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  padding-right: 50px;
+  padding-left: 20px;
+  padding-top: 3px;
+  justify-content: space-evenly;
+}
+.items .item p {
+  font-family: "Averia Serif Libre";
+  justify-content: center;
+  text-align: center;
+  margin: 1;
+}
+.items .item .price {
+  color: orange;
+  font-size: 15px;
+}
+.items .item .category {
+  color: grey;
+  font-size: 15px;
+}
+
+.title {
+  font-size: 80px;
+}
+
+#lefttop {
+  border-left-color: white;
+  border-top-color: white;
+}
+
+#topright {
+  border-right-color: white;
+  border-top-color: white;
+}
+
+#leftbottom {
+  border-left-color: white;
+  border-bottom-color: white;
+}
+
+#bottomright {
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+#top {
+  border-top-color: white;
+}
+
+#bottom {
+  border-bottom-color: white;
+}
+
+#right {
+  border-right-color: white;
+}
+
+#left {
+  border-left-color: white;
+}
+
+.delAdd {
+  font-family: "Averia Serif Libre";
+  font-size: 15px;
+  background-color: #e6e6e6;
+  z-index: 15;
+  float: left;
+  display: none;
+}
+.delAdd p {
+  padding: 20px;
+  color: black;
+}
+.delAdd p:hover {
+  color: orange;
+}
+
+/*# sourceMappingURL=mainPage.css.map */

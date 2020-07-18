@@ -1,7 +1,7 @@
 
 function loadSlider(){
+	//create the slider
 	var slider = document.getElementById('mySlider');
-	console.log(slider);
 	noUiSlider.create(slider, {
     	start: [0, 100],
     	connect: true,
@@ -10,27 +10,25 @@ function loadSlider(){
         	'max': 100
 	    }
 	});
+	//event for the display of the slider range
 	slider.noUiSlider.on('update',function(values,handler){
 	document.getElementById("first").innerHTML="$"+values[0];
 	document.getElementById("second").innerHTML="$"+values[1];
 	$('.menu').innerHTML = "";	
 	loadElements(parseInt(values[0]),parseInt(values[1]));
 });
+	var ok=localStorage.getItem("itemsLength");
+	//check if there is data in lcoal storage
+	if(localStorage.getItem("itemsLength") === null)
+		writeElements();
 	loadElements(0,100);
 }
-
-// $("#mySlider")[0].on('update',function(){
-// 	var values=this.get();
-// 	console.log(values);
-// 	document.getElementById("first").innerHTML="$"+values[0];
-// 	document.getElementById("second").innerHTML="$"+values[1];
-// });
-
+//sets slider values to 0 a and 100
 function setSlider(){
 	var slider = document.getElementById('mySlider');
 	slider.noUiSlider.set([0, 100]);
 }
-
+//display the div with add/remove operations
 $(document).on('click','.item',function(){
 		$(".delAdd").fadeIn().delay(7000).fadeOut();
 		var clas = $(this).attr('class');
@@ -38,6 +36,7 @@ $(document).on('click','.item',function(){
 		$(".del").click(function(){ deleteEl(nr); });
 	});
 
+//takes input and adds a new element
 function addEl(){
 	var title = prompt("Enter the name of the dish: ","Gourmet Croissant");
 	var category = prompt("Enter the cateogory of the dish: ","Breakfast");
@@ -55,17 +54,27 @@ function addEl(){
 	localStorage.setItem('title'+length,title);
 	localStorage.setItem('price'+length,price);
 	localStorage.setItem('src'+length,src);
+	var length = parseInt(localStorage.getItem('size'));
+	localStorage.setItem('length',length+1);
+	//set the slider to the default values
 	setSlider();
+	//reoad teh elements
 	loadElements(0,100);
 }
+
+
 
 function deleteEl(el){
 	localStorage.removeItem('title'+el);
 	localStorage.removeItem('src'+el);
 	localStorage.removeItem('category'+el);
 	localStorage.removeItem('price'+el);
-	$('.menu').innerHTML = "";	
+	$('.menu').innerHTML = "";
+	var length = parseInt(localStorage.getItem('size'));
+	localStorage.setItem('length',length-1);
+	//set silder to the default values	
 	setSlider();
+	//relaod elements
 	loadElements(0,100);
 }
 
@@ -104,13 +113,45 @@ function writeElements(){
 	localStorage.setItem('src7','img/f7.jpg');
 	localStorage.setItem('src8','img/f8.jpg');
 	localStorage.setItem('itemsLength',8);
+	localStorage.setItem('size','8');
 }
 
-function loadElements(lowerBound,upperBound){
-	console.log(lowerBound+"\n"+upperBound);
-	var length = localStorage.getItem('itemsLength');
-	//var nrOfRowDivs = Math.ceil(length/4);
+//returns the corresponding id for the outline of the elments depending on their position
+// it doesn't really work as it should yet ~ 1/2
+function computeOutlineClass(currentElement, nrOfElements){
+	if(currentElement == 1)
+		return "lefttop";
+	if(currentElement == 2 || currentElement == 3)
+			return "top";
+	if(currentElement == 4)
+		return "topright";
+	if(nrOfElements%4==0){
+		if(currentElement == nrOfElements)
+			return "bottomright";
+		if(currentElement == nrOfElements-1 || currentElement == nrOfElements-2)
+			return "bottom";
+		if(currentElement == nrOfElements-3)
+			return "leftbottom";
+	}
+	if(currentElement%4==1)
+		return "left";
+	if(currentElement%4==0)
+		return "right";
+	if(nrOfElements%4!=0){
+		if(currentElement%4==1)
+			return "leftbottom";
+		if(currentElement%4==2)
+			return "bottom";
+		if(currentElement%4==3)
+			return "bottom";
+	}
+	}
 
+//load the elements by filter
+function loadElements(lowerBound,upperBound){
+	var length = localStorage.getItem('itemsLength');;
+	//put a div for every row
+	//load the add/remove div
 	var el="<div class='delAdd'><p class='del'>Delete</p>"+
 			"<p onclick='addEl()'>Add</p></div>";
 			var count =0;
@@ -123,9 +164,10 @@ function loadElements(lowerBound,upperBound){
 			continue;
 		count+=1;
 		if(count%4==1)
-			el+="<div class='items'><div class='item "+i+"'>";
+			el+="<div class='items'><div class='item "+i+"'"+"id='"+computeOutlineClass(count,parseInt(localStorage.getItem('size')))+"'>";
 		else
-			el+="<div class='item "+i+"'>";
+			el+="<div class='item "+i+"'" +"id='"+computeOutlineClass(count,parseInt(localStorage.getItem('size')))+"'>";
+		//put 4 divs in every row div
 		el+="<div class='picture'><img src='"+localStorage.getItem('src'+i)+"'></div>"+
 				"<b><p clas='title' style='font-size: 30px;'>"+localStorage.getItem('title'+i)+"</p></b>"+
 				"<p class='category'>"+localStorage.getItem('category'+i)+"</p>"+
@@ -135,6 +177,7 @@ function loadElements(lowerBound,upperBound){
 
 
 	}
+	//load the divs
 	$('.menu').html(el);
 	//set the id for the outline 
 	/*
@@ -159,10 +202,7 @@ function loadElements(lowerBound,upperBound){
 	}*/
 }
 
-function modify(){
-	$(".delAdd").fadeIn();
-}
-
+//drop down menu
 function dropDown(el){
 	//$(el).find(".child").slideDown('slow');
 	$(el).find(".child").css({'color':'black','margin-top': 50,'background-color': 'transparent'

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Averia Serif Libre' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css-scss/mainPage.css">
+	<link href="nouislider/nouislider.css" rel="stylesheet">
+	<script src="nouislider/nouislider.js"></script>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript" src="js/mainPage.js"></script>
+	<title></title>
+</head>
+<body onload="loadSlider()">
+	<div class="topContainer">
+		<nav>
+			<img src="img/
+			caffeeLogo.jpeg">
+			<div class="caffeeLogo">
+				<p class="logoText">EUREKA</p>
+				<p class="logoText">CAFFEE</p>
+			</div>
+			<div class="rightSideInfo">
+				<b><p>HOME</p>
+				<span class="dot"></span>
+				<p>ABOUT</p>
+				<span class="dot"></span>
+				<p>SERVICE</p>
+				<span class="dot"></span>
+				<p>BLOG</p>
+				<span class="dot"></span>
+				<p>CONTACTS</p></b>
+			</div>
+		</nav>
+		<h1>Ordering food</h1>
+		<div class="forkKnife">
+			<p id="wavyLine1">kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
+			<img src="img/forkIcon.png">
+			<p id="wavyLine2">kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
+		</div>
+		<p class="randomText">Maecenas vells at magna sagittis venenatis. Integer pretium auctor <br> magna, egestas justo gravida vitae. In lacinia auctor auctor.</p>
+		<nav class="dropDownMenu" id="dropDownMenu">
+			<ul class="parent">
+				<li onclick="dropDown(this)" >CATEGORY<i class="arrow down"></i>
+					<ul class = "child">
+						<li>Item1</li><br>
+						<li>Item2</li><br>
+						<li>Item3</li><br>
+						<li>Item4</li><br>
+						<li>Item5</li><br>
+					</ul>
+				</li>
+				<li onclick="dropDown(this)">SORTING<i class="arrow down"></i>
+					<ul class = "child">
+						<li>Item1</li><br>
+						<li>Item2</li><br>
+						<li>Item3</li><br>
+						<li>Item4</li><br>
+						<li>Item5</li><br>
+					</ul>
+				</li>
+				<li onclick="dropDown(this)">VEGETARIAN<i class="arrow down"></i>
+					<ul class = "child">
+						<li>Item1</li><br>
+						<li>Item2</li><br>
+						<li>Item3</li><br>
+						<li>Item4</li><br>
+						<li>Item5</li><br>
+					</ul>
+				</li>
+			</ul>
+			<div class="slider" >
+				<p>PRICE</p>
+				<p class="price" id="first"></p>
+				<div id="mySlider"></div>
+				<!--<input type="range" name="">-->
+				<p class="price" id="second"></p>
+			</div>
+		</nav>
+	</div>
+	<div class="menu">
+		<!--static dishes-->
+		<!-- 
+		<div class="items" style="background: white">
+			<div class="item" id="lefttop">
+				<div class="picture"><img src="img/f1.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Eggs</p></b>
+				<p class="category">Breakfast</p>
+				<p class="price">$12</p>
+			</div>
+			<div class="item" id="top">
+				<div class="picture"><img src="img/f2.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Sweets</p></b>
+				<p class="category">Breakfast</p>
+				<p class="price">$17</p>
+			</div>
+			<div class="item" id="top">
+				<div class="picture"><img src="img/f3.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Gourmet Breakfast</p></b>
+				<p class="category">Breakfast</p>
+				<p class="price">$20</p>
+			</div>
+			<div class="item" id="topright">
+				<div class="picture"><img src="img/f4.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Risotto</p></b>
+				<p class="category">Second Courses</p>
+				<p class="price">$45</p>
+			</div>
+		</div>
+		<div class="items" style="background: white">
+			<div class="item" id="left">
+				<div class="picture"><img src="img/f5.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Fancy Meat</p></b>
+				<p class="category">Second Courses</p>
+				<p class="price">$70</p>
+			</div>
+			<div class="item all">
+				<div class="picture"><img src="img/f6.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Sea Weed Rice</p></b>
+				<p class="category">Entrees</p>
+				<p class="price">$37</p>
+			</div>
+			<div class="item all">
+				<div class="picture"><img src="img/f7.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Spaghetti</p></b>
+				<p class="category">Second Courses</p>
+				<p class="price">$40</p>
+			</div>
+			<div class="item" id="right">
+				<div class="picture"><img src="img/f8.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Spotted Burger</p></b>
+				<p class="category">Burgers</p>
+				<p class="price">$70</p>
+			</div>
+		</div>
+		<div class="items" style="background: white">
+			<div class="item" id="left">
+				<div class="picture"><img src="img/f1.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Eggs</p></b>
+				<p class="category">Breakfast</p>
+				<p class="price">$12</p>
+			</div>
+			<div class="item all">
+				<div class="picture"><img src="img/f2.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Sweets</p></b>
+				<p class="category">Breakfast</p>
+				<p class="price">$17</p>
+			</div>
+			<div class="item all">
+				<div class="picture"><img src="img/f3.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Gourmet Breakfast</p></b>
+				<p class="category">Breakfast</p>
+				<p class="price">$20</p>
+			</div>
+			<div class="item" id="right">
+				<div class="picture"><img src="img/f4.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Risotto</p></b>
+				<p class="category">Second Courses</p>
+				<p class="price">$45</p>
+			</div>
+		</div>
+		<div class="items" style="background: white">
+			<div class="item" id="leftbottom">
+				<div class="picture"><img src="img/f5.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Fancy Meat</p></b>
+				<p class="category">Second Courses</p>
+				<p class="price">$70</p>
+			</div>
+			<div class="item" id="bottom">
+				<div class="picture"><img src="img/f6.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Sea Weed Rice</p></b>
+				<p class="category">Entrees</p>
+				<p class="price">$37</p>
+			</div>
+			<div class="item" id="bottom">
+				<div class="picture"><img src="img/f7.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Spaghetti</p></b>
+				<p class="category">Second Courses</p>
+				<p class="price">$40</p>
+			</div>
+			<div class="item" id="bottomright">
+				<div class="picture"><img src="img/f8.jpg"></div>
+				<b><p clas="title" style="font-size: 30px;">Spotted Burger</p></b>
+				<p class="category">Burgers</p>
+				<p class="price">$70</p>
+			</div>
+		-->
+	</div>
+</body>
+</html>

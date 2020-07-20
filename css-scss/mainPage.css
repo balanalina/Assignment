@@ -92,13 +92,13 @@ h1 {
   height: 25px;
 }
 
-.randomText {
+.descriptionText {
   font-family: "Averia Serif Libre";
   font-size: 20px;
   color: orange;
   margin-top: 0;
 }
-.randomText:hover {
+.descriptionText:hover {
   font-size: 35px;
 }
 

@@ -1,8 +1,7 @@
 $font: 'Averia Serif Libre';
 $fontSize: 15px;
 
-.topContainer{
-
+.topContainer {
 	background: url(caffee2.jpg) no-repeat center fixed;
 	height: 550px;
 	background-size: cover;
@@ -11,25 +10,24 @@ $fontSize: 15px;
 	position: relative;
 	text-align: center;
 	
-	.caffeeLogo{
+	.caffeeLogo {
 		display: inline-block;
 		padding-top: 2.7%;
 	}
 
-	nav{
+	nav {
 		width: 100%;
-		//background-color: green;
 		height: 110px;
 		padding-bottom: 10px;
 		display: flex;
 
-		p{
+		p {
 			font-family: $font;
 			font-size: $fontSize;
 			color: white;
 		}
 
-		.logoText{
+		.logoText {
 			font-family: $font;
 			font-size: $fontSize;
 			color: white;
@@ -37,7 +35,7 @@ $fontSize: 15px;
 			margin: 0;
 		}
 
-		img{
+		img {
 			border-radius: 50%;
 			height: 50px;
 			width: auto;
@@ -45,30 +43,27 @@ $fontSize: 15px;
 			margin-top: 2%;
 		}
 	}
-
 }
 
-.rightSideInfo{
-	//display: inherit;
-	//margin: 0;
-	//background-color: purple;
+.rightSideInfo {
 	margin-left: 30%;
 	justify-content: space-between;
 	padding-top: 2.7%;
 	margin-right: 0;
 	width: 100%;
 
-	p{
+	p {
 		display:inline-block;
 		padding-right: 20px;
 		padding-left: 20px;
-		&:hover{
+
+		&:hover {
 			color: orange;
 		}
 	}
 }
 
-.dot{
+.dot {
 	height: 7px;
     width: 7px;
     border-radius: 50%;
@@ -77,21 +72,19 @@ $fontSize: 15px;
     display: inline-block;
  }
 
- h1{
+h1 {
  	font-family: $font;
  	font-size: 80px;
  	color: orange;
  	vertical-align: middle;
  	margin-bottom: 1px;
- 	//-webkit-text-stroke: 0.3px black;
  }
 
- .forkKnife{
+.forkKnife {
  	vertical-align: middle;
  	width: 100%;
- 	//background-color: blue;
 
- 	p{
+ 	p {
  		width: 100px;
  		color: transparent;
  		display: inline-block;
@@ -104,8 +97,7 @@ $fontSize: 15px;
  		margin-top: 0px;
  	}
 
- 	img{
- 		//padding: 10px;
+ 	img {
  		display: inline-block;
  		margin-top: 6px;
  		height: 25px;
@@ -113,58 +105,52 @@ $fontSize: 15px;
 
  }
 
- .randomText{
- 	//margin-left: 80px;
+.descriptionText {
  	font-family: $font;
- 	font-size: $fontSize +5;
+ 	font-size: $fontSize + 5;
  	color: orange;
  	margin-top: 0;
 
- 	&:hover{
+ 	&:hover {
  		font-size: $fontSize + 20;
  	}
  }
 
- .dropDownMenu{
+ .dropDownMenu {
  	width: 100%;
  	background-color: #e6e6e6;
  	bottom: 0;
  	left: 0;
  	position: absolute;
  	display: flex;
- 	//top:500px;
  	height: 50px !important;
 
- 	ul{
+ 	ul {
  		justify-content: space-between;
  		width: 50%;
  		align-items: flex-start;
- 		//background-color: pink;
  	}
 
- 	li{
+ 	li {
  		width: 20%;
  		display: inline-block;
  		font-family: $font;
  		font-size: $fontSize;
-
  	}
 
- 	.slider{
-
+ 	.slider {
  		width: 50%;
  		justify-content: center;
  		margin-top: 10px;
 
- 		p{
+ 		p {
  			display: inline-block;
  			font-family: $font;
  			font-size: $fontSize;
  			color: black;
-
  		}
 
- 		#mySlider{
+ 		#mySlider {
  			display: inline-block;
  			width: 300px;
  			margin: 2px;
@@ -173,7 +159,7 @@ $fontSize: 15px;
  			margin-top: 8px;
  		}
 
- 		.price{
+ 		.price {
  			color: grey;
  		}
  	}
@@ -184,29 +170,28 @@ $fontSize: 15px;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-
 }
 
- .down {
+.down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
 
-.child{
+.child {
 		display: none;		
 		font-size: $fontSize;
 		font-family: $font;
-		li{
+
+		li {
 			margin: 2px;
 			color: black;
 		}
 	}
 
-.parent > li{
+.parent > li {
 	display: inline-block;
 	width: 20%;
 	text-align: center;
-			//font-size: 30px;
 	padding-top: 8px;
 	cursor: pointer;
 	float: left;
@@ -217,19 +202,17 @@ $fontSize: 15px;
 	text-align: center;
 }
 
-
-.menu{
+.menu {
 	margin-top: 50px;
 	outline-color: none;
-	//background: black;
 }
 
-.items{
+.items {
 	display: flex;
 	margin-left: 12%;
 	margin-right: 15%;
 
-	.item{
+	.item {
 		border-color: #e6e6e6;
 		border-style: solid;
 		border-width: 0.5px;
@@ -243,14 +226,13 @@ $fontSize: 15px;
           z-index: 10; 
         }
 
-		.picture{
+		.picture {
 			height: 250px;
 			display: flex;
-
 			padding-top: 7px;
 		}
 
-		img{
+		img {
 			width: 250px;
 			height: auto;
 			border-radius: 50%;
@@ -267,12 +249,12 @@ $fontSize: 15px;
 			margin: 1;
 		}
 
-		.price{
+		.price {
  			color: orange;
  			font-size: $fontSize;
  		}
 
- 		.category{
+ 		.category {
  			color: grey;
  			font-size: $fontSize;
  		}
@@ -280,57 +262,59 @@ $fontSize: 15px;
 	}
 }
 
-.title{
+.title {
  	font-size: 80px;
- }
+}
 
-#lefttop{
+#lefttop {
 	border-left-color: white;
 	border-top-color: white;
 }
 
-#topright{
+#topright {
 	border-right-color: white;
 	border-top-color: white;
 }
 
-#leftbottom{
+#leftbottom {
 	border-left-color: white;
 	border-bottom-color: white;
 }
 
-#bottomright{
+#bottomright {
 	border-right-color: white;
 	border-bottom-color: white;
 }
 
-#top{
+#top {
 	border-top-color: white;
 }
 
-#bottom{
+#bottom {
 	border-bottom-color: white;
 }
 
-#right{
+#right {
 	border-right-color: white;
 }
 
-#left{
+#left {
 	border-left-color: white;
 }
 
-.delAdd{
+.delAdd {
 	font-family: $font;
 	font-size: $fontSize;
 	background-color: #e6e6e6;
 	z-index: 15;
 	float: left;
 	display: none;
-	p{
+
+	p {
 		padding: 20px;
 		color: black;
-		&:hover{
+
+		&:hover {
 			color: orange;
 		}
 	}

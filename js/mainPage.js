@@ -1,4 +1,3 @@
-
 function loadSlider(){
 	//create the slider
 	var slider = document.getElementById('mySlider');
@@ -12,13 +11,12 @@ function loadSlider(){
 	});
 	//event for the display of the slider range
 	slider.noUiSlider.on('update',function(values,handler){
-	document.getElementById("first").innerHTML="$"+values[0];
-	document.getElementById("second").innerHTML="$"+values[1];
-	$('.menu').innerHTML = "";	
-	loadElements(parseInt(values[0]),parseInt(values[1]));
-});
-	var ok=localStorage.getItem("itemsLength");
-	//check if there is data in lcoal storage
+		document.getElementById("first").innerHTML="$"+values[0];
+		document.getElementById("second").innerHTML="$"+values[1];
+		$('.menu').innerHTML = "";	
+		loadElements(parseInt(values[0]),parseInt(values[1]));
+	});
+	//checks if there is data in local storage
 	if(localStorage.getItem("itemsLength") === null)
 		writeElements();
 	loadElements(0,100);
@@ -30,19 +28,19 @@ function setSlider(){
 }
 //display the div with add/remove operations
 $(document).on('click','.item',function(){
-		$(".delAdd").fadeIn().delay(7000).fadeOut();
-		var clas = $(this).attr('class');
-		nr = clas.slice(5);
-		$(".del").click(function(){ deleteEl(nr); });
-	});
+	$(".delAdd").fadeIn().delay(7000).fadeOut();
+	var className = $(this).attr('class');
+	nr = className.slice(5);
+	$(".del").click(function(){ deleteEl(nr); });
+	$(".add").click(function(){ addEl(); });
+});
 
 //takes input and adds a new element
 function addEl(){
-	var title = prompt("Enter the name of the dish: ","Gourmet Croissant");
-	var category = prompt("Enter the cateogory of the dish: ","Breakfast");
-	var price = prompt("Enter the price of teh dish: ","$12");
-	var src = prompt("Enter the dish picture source: ","");
-	console.log(title);
+	var title = prompt("Enter the name of the dish: ", "Gourmet Croissant");
+	var category = prompt("Enter the cateogory of the dish: ", "Breakfast");
+	var price = prompt("Enter the price of teh dish: ", "$12");
+	var src = prompt("Enter the dish picture source: ", "");
 	if(title == null || category == null || price == null || src == null)
 		return;
 	if(title.length == 0 || category.length == 0 || price.length == 0 || src.length == 0)
@@ -61,8 +59,6 @@ function addEl(){
 	//reoad teh elements
 	loadElements(0,100);
 }
-
-
 
 function deleteEl(el){
 	localStorage.removeItem('title'+el);
@@ -145,7 +141,7 @@ function computeOutlineClass(currentElement, nrOfElements){
 		if(currentElement%4==3)
 			return "bottom";
 	}
-	}
+}
 
 //load the elements by filter
 function loadElements(lowerBound,upperBound){
@@ -153,7 +149,7 @@ function loadElements(lowerBound,upperBound){
 	//put a div for every row
 	//load the add/remove div
 	var el="<div class='delAdd'><p class='del'>Delete</p>"+
-			"<p onclick='addEl()'>Add</p></div>";
+			"<p class='add'>Add</p></div>";
 			var count =0;
 	for(var i=1;i<=length;i++){
 		if(localStorage.getItem('src'+i) == null)
@@ -174,32 +170,9 @@ function loadElements(lowerBound,upperBound){
 				"<p class='price'>"+localStorage.getItem('price'+i)+"</p></div>";
 		if(count%4==0)
 			el+="</div>"	
-
-
 	}
 	//load the divs
 	$('.menu').html(el);
-	//set the id for the outline 
-	/*
-	$('.1').attr("id","lefttop");
-	$('.3').attr("id","top");
-	$('.2').attr("id","top");
-	$('.4').attr("id","topright");
-	//nr of el on the last row
-	var lastRowEl=length%4;
-	if(lastRowEl == 0)
-	lastRowEl=4; 
-	$()
-	for(var i=5;i<=length;i+=4){
-		$('.'+i).attr("id","left");
-		$('.'+(i+3)).attr("id","right");
-	}
-	/*
-	var lastRow=length;
-	for(var i=lastRowEl;i>0;i--){
-		if(lastRowEl==4)
-			$('.'+).attr("id","bottom right");
-	}*/
 }
 
 //drop down menu
